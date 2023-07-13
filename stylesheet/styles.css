@@ -1,0 +1,131 @@
+:root {
+  --main-color: #f5f5f5;
+  --secondary-color: red;
+  --font-heading: "Ysabeau SC", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+/* CSS Reset */
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Change the background color of the body tag */
+body {
+  background-color: var(--main-color);
+  padding-top: 100px;
+}
+
+/*Style rule for header*/
+header {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 20px;
+}
+
+header img {
+  margin: 0;
+  width: 70px;
+}
+
+header h1 {
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+  font-family: var(--font-heading);
+}
+
+/* Style rule for navigation area*/
+nav {
+  background-color: blue;
+
+  top: 100px;
+  width: 100%;
+  z-index: 999;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 20px;
+  margin: 0;
+}
+
+nav a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-family: var(--font-body);
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style rules for main content */
+main {
+  padding: 2%;
+
+  overflow: auto;
+}
+
+main p {
+  font-size: 1.25em;
+  font-family: var(--font-body);
+}
+
+/* Style rule for the footer*/
+footer {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  height: 70px;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 20px;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+footer a {
+  color: var(--main-color);
+  text-decoration: none;
+  margin-left: 10px;
+}
