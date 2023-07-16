@@ -28,76 +28,115 @@
     <!--navigation bar-->
     <nav>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="packages.html">Packages</a>
-        </li>
-        <li>
-          <a href="registrations.html">Registrations</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact Us</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="registrations.html">Registrations</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
+
+    <h2>Our Packages and Services</h2>
 
     <!--main section-->
     <main class="packages">
       <div class="round">
-        <img src="images/logo.jpg" alt="Image 1" />
-        <p>
-          Code Availability and Learner's License Classes: Gain access to all
-          driving codes and join our learner's license classes for a solid
-          foundation in traffic rules and regulations.
-        </p>
-      </div>
-      <div class="round">
-        <img src="images/logo.jpg" alt="Image 2" />
-        <p>
-          Driving Lessons: Our tailored driving lessons equip you with the
-          skills and confidence needed to navigate any road situation.
-        </p>
-      </div>
-      <div class="round">
-        <img src="images/logo.jpg" alt="Image 3" />
-        <p>
-          Refresher's Course: Polish your driving skills and update your
-          knowledge with our refresher's course, designed for both seasoned and
-          occasional drivers.
-        </p>
-      </div>
-      <div class="round">
-        <img src="images/logo.jpg" alt="Image 4" />
-        <p>
-          Traffic Register Number and Professional Driving Permit: We assist
-          aspiring professional drivers in obtaining their traffic register
-          number and professional driving permit for a successful career on the
-          road.
-        </p>
-      </div>
-      <div class="round">
-        <img src="images/logo.jpg" alt="Image 5" />
-        <p>
-          Driving License Renewal: Simplify the process of renewing your driving
-          license with our assistance, ensuring you stay legally compliant and
-          ready to hit the road.
-        </p>
-      </div>
-      <div class="round">
-        <img src="images/logo.jpg" alt="Image 6" />
-        <p>
-          Driving License Renewal: Simplify the process of renewing your driving
-          license with our assistance, ensuring you stay legally compliant and
-          ready to hit the road.
-        </p>
+        <img
+          src="images/packages.jpg"
+          alt="Image 1"
+          onclick="toggleDetails('package1')"
+          title="click to view more"
+        />
+        <h4>Driving License Renewal</h4>
+        <ul id="package1" class="description">
+          <li><strong>R1000</strong></li>
+          <li>Step-by-step guidance for license renewal</li>
+          <li>Ensuring compliance with renewal requirements</li>
+          <li>Smooth and hassle-free renewal process</li>
+        </ul>
       </div>
 
-      <a href="https://online.natis.gov.za/#/" class="external-;ink"
-        >Book Now</a
-      >
+      <div class="round">
+        <img
+          src="images/packages.jpg"
+          alt="Image 2"
+          onclick="toggleDetails('package2')"
+          title="click to view more"
+        />
+        <h4>Driving Lessons</h4>
+        <ul id="package2" class="description">
+          <li><strong>R1500</strong></li>
+          <li>Customized driving lessons for individual needs</li>
+          <li>Hands-on practice in real-life scenarios</li>
+          <li>Expert instructors providing guidance and support</li>
+        </ul>
+      </div>
+      <div class="round">
+        <img
+          src="images/packages.jpg"
+          alt="Image 3"
+          onclick="toggleDetails('package3')"
+          title="click to view more"
+        />
+        <h4>Refresher's Course</h4>
+        <ul id="package3" class="description">
+          <li><strong>R2000</strong></li>
+          <li>Review and reinforce driving skills</li>
+          <li>Update knowledge of road regulations</li>
+          <li>Boost confidence in challenging driving situations</li>
+        </ul>
+      </div>
+
+      <div class="round">
+        <img
+          src="images/packages.jpg"
+          alt="Image 4"
+          onclick="toggleDetails('package4')"
+          title="click to view more"
+        />
+        <h4>Code Availability and Learner's License Classes</h4>
+        <ul id="package4" class="description">
+          <li><strong>R2000</strong></li>
+          <li>Gain access to all driving codes</li>
+          <li>Join learner's license classes for a solid foundation</li>
+          <li>Learn traffic rules and regulations</li>
+        </ul>
+      </div>
+
+      <div class="round">
+        <img
+          src="images/packages.jpg"
+          alt="Image 5"
+          onclick="toggleDetails('package5')"
+          title="click to view more"
+        />
+        <h4>Register Number and Professional Driving Permit</h4>
+        <ul id="package5" class="description">
+          <li><strong>R5000</strong></li>
+          <li>Guidance in obtaining traffic register number</li>
+          <li>Assistance with professional driving permit application</li>
+          <li>Preparation for professional driving career</li>
+        </ul>
+      </div>
+      <div class="round">
+        <img
+          src="images/packages.jpg"
+          alt="Image 6"
+          onclick="toggleDetails('package6')"
+          title="click to view more"
+        />
+        <h4>Advanced Defensive Driving Course</h4>
+        <ul id="package6" class="description">
+          <li><strong>R5000</strong></li>
+          <li>Advanced techniques for defensive driving</li>
+          <li>Increased awareness of potential hazards</li>
+          <li>Strategies to minimize risks and prevent accidents</li>
+        </ul>
+      </div>
     </main>
+
+    <button class="external-link">
+      <a href="https://online.natis.gov.za/#/">Book Now</a>
+    </button>
 
     <!--Footer section-->
     <footer>
@@ -105,12 +144,18 @@
         <p>&copy; Copyright 2021. All Rights Reserved.</p>
         <p>
           <a href="mailto:drivedefensive08@gmail.com"
-            ><i class="fa-regular fa-envelope"> </i
-          ></a>
-          &nbsp;
-          <a href="tel:+2799599075"><i class="fa-solid fa-phone"></i></a>
+            ><i class="fas fa-envelope"></i></a
+          >&nbsp;
+          <a href="tel:+2799599075"><i class="fas fa-phone"></i></a>
         </p>
       </div>
     </footer>
+
+    <script>
+      function toggleDetails(id) {
+        const packageDetails = document.getElementById(id);
+        packageDetails.classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
