@@ -73,21 +73,33 @@ nav {
 }
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
   list-style-type: none;
-  padding: 0;
   margin: 0;
 }
 
 nav li {
   padding: 20px;
   margin: 0;
+  border-right: 1px solid var(--primary-color);
+}
+
+/* Style rule to Remove the border from the last list item */
+nav li:last-child {
+  border-right: none;
 }
 
 nav a {
-  color: var(--primary-color);
+  display: block;
   text-decoration: none;
+  color: var(--primary-color);
   font-family: var(--font-body);
+}
+
+/* Style rule for hover effect for the links */
+nav li:hover {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 /* Style rule for responsive images */
@@ -147,37 +159,8 @@ footer a {
   margin-left: 10px;
 }
 
-/*Style rule for round*/
-main.packages {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-}
 
-.round {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.round img {
-  max-width: 100%;
-  height: auto;
-}
-.round h4 {
-  font-family: var(--font-heading);
-  margin-bottom: 0;
-  color: var(--highligher-color);
-}
-
-.round p {
-  text-align: center;
-  margin-top: 0;
-}
-
-.round li {
-  font-size: 15px;
-}
 
 /* Style rule for ids or .description*/
 .description {
@@ -287,17 +270,71 @@ main .contact {
   transform: scale(1.1);
 }
 
-/* Style rule for mobile Viewport */
-@media (min-width: 600px) {
-  body {
-  }
+/* Style rule for the main element in packages.html */
+
+/* Style rule for the grid*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Style rule for each article */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+}
+article h4 {
+  font-family: var(--font-heading);
+  margin-bottom: 0;
+  color: var(--highligher-color);
+}
+
+article p {
+  text-align: center;
+  margin-top: 0;
+}
+
+article li {
+  font-size: 15px;
+}
+
+/* Style rule for tablet Viewport */
+@media all and (min-width: 768px) and (max-width: 1280px) {
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
   /* Styles for header */
-  header h1 {
-    font-size: 60px;
+  header, nav {
+    position: static ;
+   
   }
 
-  /* Styles for navigation area */
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  /* Tablet viewport: Styles for grid */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
 
   /* Styles for main content */
 
@@ -312,12 +349,28 @@ main .contact {
   /* Styles for contact section */
 
   /* Styles for the map */
+  .map iframe {
+    width:auto;
+    height: auto;
+  }
 
   /* Styles for image grid */
 }
 
 /* Styles for smaller screens (mobile viewport) */
-@media (max-width: 599px) {
+@media (max-width: 760px) {
+body,
+header,
+nav,
+main,
+footer,
+img,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
   body {
     padding-top: 120px;
   }
@@ -328,7 +381,7 @@ main .contact {
   }
 
   header img {
-    width: 17%;
+    width: 14%;
   }
 
   /* Styles for navigation area */
@@ -368,7 +421,7 @@ main .contact {
 
   /* Styles for round and packages */
 
-  .round.show .description li {
+  article.show .description li {
     font-size: 12px;
     padding: 5px 0;
     margin: 0;
@@ -387,4 +440,10 @@ main .contact {
     height: 300px;
   }
   /* Styles for image grid */
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 769px) {
+	/* Desktop Viewport: Style rule for header */
+
 }
